@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:food_app/screens/initialPage.dart';
 import 'package:food_app/screens/menu.dart';
+import 'package:food_app/screens/orderConfirm.dart';
 
 import 'utils/constants.dart';
 import 'utils/cut_corners_border.dart';
@@ -19,6 +20,7 @@ class _RapidaoAppState extends State<RapidaoApp> {
       initialRoute: '/',
       routes: {
         '/menu': (BuildContext context) => MenuPage(),
+        '/orderConfirm': (BuildContext context) => OrderConfirmPage()
       },
       theme: _kRapidaoTheme,
     );

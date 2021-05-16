@@ -4,8 +4,9 @@ const kWhiteColor = Color(0xFFFFFFFF);
 const kBlackColor = Color(0xFF000000);
 const kTextColor = Color(0xFF1D150B);
 const kPrimaryColor = Color(0xFFFAD733);
-const kSecondaryColor = Color(0xFFF42125);
-const kBorderColor = Color(0xFFDDDDDD);
+const kPrimaryColor2 = Color(0xFFFFF5C6);
+const kSecondaryColor = Color(0xFF771011);
+const kBorderColor = Color(0xFFEEEEEE);
 
 const kRapidaoPink50 = Color(0xFFFEEAE6);
 const kRapidaoPink100 = Color(0xFFFEDBD0);
