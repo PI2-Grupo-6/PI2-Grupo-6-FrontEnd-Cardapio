@@ -43,6 +43,7 @@ flutter:
   assets:
     - assets/icons/
     - assets/images/
+    - assets/images/LogoAmarela1.png
     - assets/rapidao.png
   #  - images/a_dot_ham.jpeg
 
