@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 class FoodsRepository {
   static List<Food> loadFoods() {
-    const allFoods = <Food>[
+    var allFoods = <Food>[
       Food(
         name: "Arroz",
         foodType: "grao",

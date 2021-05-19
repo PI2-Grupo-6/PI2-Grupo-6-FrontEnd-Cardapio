@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:food_app/model/food.dart';
 import 'package:food_app/utils/constants.dart';
 
 class TypeFood extends StatefulWidget {
-  String foodDescription;
-  String foodType;
-
-  TypeFood(this.foodType, this.foodDescription);
+  Food food;
+  
+  TypeFood(this.food);
   @override
   _TypeFoodState createState() => _TypeFoodState();
 }
@@ -14,6 +14,11 @@ class _TypeFoodState extends State<TypeFood> {
   bool checkbox1 = false;
 
   bool checkbox2 = false;
+
+   bool checkboxp = false;
+
+    bool checkboxm = false;
+     bool checkboxg = false;
 
   @override
   Widget build(BuildContext context) {
@@ -25,9 +30,9 @@ class _TypeFoodState extends State<TypeFood> {
           children: <Widget>[
             Container(
               padding: EdgeInsets.all(10),
-              child: Text("Descrição: " + widget.foodDescription),
+              child: Text("Descrição: " + widget.food.description),
             ),
-            widget.foodType == "porcao"
+            widget.food.foodType == "porcao"
                 ? Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
@@ -38,6 +43,7 @@ class _TypeFoodState extends State<TypeFood> {
                           setState(
                             () {
                               checkbox1 = value;
+                              widget.food.selected = "1 porção";
                             },
                           );
                         },
@@ -50,6 +56,7 @@ class _TypeFoodState extends State<TypeFood> {
                           setState(
                             () {
                               checkbox2 = value;
+                              widget.food.selected = "2 porções";
                             },
                           );
                         },
@@ -61,11 +68,12 @@ class _TypeFoodState extends State<TypeFood> {
                     children: <Widget>[
                       Text("P (100g)"),
                       Checkbox(
-                        value: this.checkbox1,
+                        value: this.checkboxp,
                         onChanged: (bool value) {
                           setState(
                             () {
-                              checkbox1 = value;
+                              checkboxp = value;
+                              widget.food.selected = "P";
                             },
                           );
                         },
@@ -73,11 +81,12 @@ class _TypeFoodState extends State<TypeFood> {
                       SizedBox(width: 20),
                       Text("M (250g)"),
                       Checkbox(
-                        value: this.checkbox2,
+                        value: this.checkboxm,
                         onChanged: (bool value) {
                           setState(
                             () {
-                              checkbox2 = value;
+                              checkboxm = value;
+                              widget.food.selected = "M";
                             },
                           );
                         },
@@ -85,11 +94,12 @@ class _TypeFoodState extends State<TypeFood> {
                       SizedBox(width: 20),
                       Text("G (450g)"),
                       Checkbox(
-                        value: this.checkbox2,
+                        value: this.checkboxg,
                         onChanged: (bool value) {
                           setState(
                             () {
-                              checkbox2 = value;
+                              checkboxg = value;
+                              widget.food.selected = "G";
                             },
                           );
                         },
