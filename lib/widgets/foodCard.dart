@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:food_app/model/food.dart';
-import 'package:food_app/model/foods_repository.dart';
 import 'package:food_app/utils/constants.dart';
 import 'package:food_app/widgets/typeFood.dart';
 
@@ -84,7 +83,7 @@ class _FoodCardState extends State<FoodCard> {
             ),
           ),
           addFoodQuant
-              ? TypeFood(widget.food.foodType, widget.food.description)
+              ? TypeFood(widget.food)
               : SizedBox(),
           SizedBox(
             height: 10,
@@ -95,21 +94,4 @@ class _FoodCardState extends State<FoodCard> {
   }
 }
 
-class AccentColorOverride extends StatelessWidget {
-  const AccentColorOverride({Key key, this.color, this.child})
-      : super(key: key);
 
-  final Color color;
-  final Widget child;
-
-  @override
-  Widget build(BuildContext context) {
-    return Theme(
-      child: child,
-      data: Theme.of(context).copyWith(
-        accentColor: color,
-        brightness: Brightness.dark,
-      ),
-    );
-  }
-}
