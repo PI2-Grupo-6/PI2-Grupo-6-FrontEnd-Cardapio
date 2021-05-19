@@ -2,6 +2,11 @@
 
 Esse repositório abrange a solução frontend da parte de cardápio do projeto Rapidão 
 
+# Link protótipo do figma
+
+- [Protótipo cardápio](https://www.figma.com/proto/bJqOhT34LFld1FHS8quWsq/Ru-Rapid%C3%A3o?node-id=7%3A2&scaling=scale-down&page-id=0%3A1)
+
+
 ## Instruções
 1. Instale as dependências necessárias. (Ubuntu 20.04)
 ```bash
