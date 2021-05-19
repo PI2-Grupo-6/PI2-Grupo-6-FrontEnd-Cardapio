@@ -11,7 +11,7 @@ class MenuPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: Text("Rapidao")),
       body: Container(
-        padding: EdgeInsets.all(30),
+        padding: EdgeInsets.only(top: 30),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.center,
